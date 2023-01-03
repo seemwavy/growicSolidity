@@ -18,7 +18,7 @@ contract modifierAssignment {
         _;
     }
     address owner;
-    function withdraw(uint256 funds) public onlyOwner {
+    function withdraw(uint256 funds) public onlyOwner hasDeposited {
         require(userBalance[msg.sender] >= funds, "You don't have enough funds");
         userBalance[msg.sender] -= funds;
     }
