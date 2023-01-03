@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.4;
 
-contract mapping {
+contract mapAssignment {
     mapping(address => uint256) userBalance;
     function deposit(uint256 funds) public {
         userBalance[msg.sender] += funds;
