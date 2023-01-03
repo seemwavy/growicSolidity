@@ -12,7 +12,7 @@ contract dataTypes {
     //address, example: walllet address for transactions
     address private cryptoWalletAddress = 0xd49CAfcDd07c2e029d1Ba2f390f4d4eAd3E6224b;
     //enum example: a dayOfWeek variable that can only have values of "sunday" monday" "tuesday" etc.
-    enum public restrictedVariableWithPredefinedValues  { apple, orange, grapes }
+    enum restrictedVariableWithPredefinedValues  { apple, orange, grapes }
     //bytes variables stored in a small data type that can make transactions cheaper for example saving number variables as bytes instead of integers 
     bytes32 public smallDataTypeComputerReadableValues = "This is really 0's and 1's";
     //string: words the computer reads as text like "Hello World"
