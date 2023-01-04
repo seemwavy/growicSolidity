@@ -15,12 +15,13 @@ contract structAssignment {
         string name;
         uint256 age;
     }
-    User public user;
+    mapping(address => User) userData;
     function setUserDetails(string memory name, uint256 age) public {
-        user = User(name, age);
+        userData[msg.sender] = User(name, age);
+
     }
 
     function getUserDetail() public view returns (string memory, uint256) {
-        return (user.name, user.age);
+        return (userData[msg.sender].name, userData[msg.sender].age);
     }
 }

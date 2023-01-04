@@ -41,6 +41,7 @@ contract events {
     function addFund(uint256 _amount) public checkFee hasDeposited {
         require(_amount > fee, "Insufficient funds");
         userBalance[msg.sender] += _amount;
+        emit fundsDeposited(userBalance[msg.sender], _amount);
     }
     modifier hasDeposited {
         require(userBalance[msg.sender] > 0, "User must have deposited funds before adding more");
