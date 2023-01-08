@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
-import "./erc20.sol";
+import "./ERC20.sol";
 
 contract inheritance is ERC20 {
     constructor(uint256 initialSupply) ERC20("WavyToken", "WAVY") {
